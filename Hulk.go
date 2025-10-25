@@ -184,8 +184,7 @@ func httpcall(url string, host string, data string, headers arrayFlags, s chan u
 
 		if err != nil {
 			s <- callExitOnErr
-			return
-			
+			return	
 		}
 
 		q.Header.Set("User-Agent", headersUseragents[rand.Intn(len(headersUseragents))])
